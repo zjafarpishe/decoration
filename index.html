@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>farashow/decoration</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+
+
+  <model-viewer id="helmet" src="1.glb" camera-controls poster="decoration1.png" camera-orbit="45deg 80deg 4m" ar ar-mode="scene-viewer webxr"
+    environment-image="./music_hall_01_1k.hdr" touch-action="pan-y" shadow-intensity="0.93" shadow-softness="1"
+    in-camera-orbit="auto auto 30.35m" min-field-of-view="12deg" >
+    <!-- <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+
+    </button>
+    <div id="ar-prompt">
+      <img src="ar_hand_prompt.png">
+    </div> -->
+  </model-viewer>
+
+  <div class="pc">
+    <div class="MenuPC">
+      <h5 class=" card__title box" onclick="changeMaterial('curtain','Material.002',window.event)">
+        <img src="./assets/icon/window-curtains-thin.256x256.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          پرده
+        </span>
+      </h5>
+
+      <h5 class=" card__title box" onclick="changeMaterial('floor','Birch_Wood_Flooring__English',window.event)">
+        <img src="./assets/icon/floor-plan.256x256.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          کف
+        </span>
+      </h5>
+      <h5 class=" card__title box" onclick="changeMaterial('picture','Material.013',window.event)">
+        <img src="./assets/icon/wallpaper.256x256 (1).png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          قاب عکس
+        </span>
+      </h5>
+
+      <h5 class=" card__title box" onclick="changeMaterial('chandelier','Leather_Fabric_01.002',window.event)">
+        <img src="./assets/icon/chandelier-light.256x256.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          لوستر
+        </span>
+      </h5>
+
+      <h5 class=" card__title box" onclick="changeMaterial('Carpet','Material.021',window.event)">
+        <img src="./assets/icon/scarf-thin.256x247.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          فرش
+        </span>
+      </h5>
+
+      <h5 class=" card__title box" onclick="changeMaterial('accessory','Tecido.005',window.event)">
+        <img src="./assets/icon/warm-scarf.245x256.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          شال مبل
+        </span>
+      </h5>
+
+      <h5 class="card__title box" onclick="changeMaterial('sofa','Fabric.002',window.event)">
+        <img src="./assets/icon/sofa-furniture.256x195.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          مبل
+        </span>
+      </h5>
+
+      <h5 class="card__title box" onclick="changeMaterial('backChar','Material.003',window.event)">
+        <img src="./assets/icon/seat-chair.210x256.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          چوب صندلی
+        </span>
+      </h5>
+
+      <h5 class="card__title box" onclick="changeMaterial('chair','Fabric.001',window.event)">
+        <img src="./assets/icon/seat-chair.210x256.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          پارچه صندلی
+        </span>
+      </h5>
+
+      <h5 class="card__title box" onclick="changeMaterial('table','Material.009',window.event)">
+        <img src="./assets/icon/home-table.256x125.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          میز
+        </span>
+      </h5>
+      <!-- <img src="https://picsum.photos/800/600?random=3" alt=""> -->
+      <h5 class="card__title box" onclick="changeMaterial('wall','Material.001',window.event)">
+        <img src="./assets/icon/floor-tiles.256x174.png" style="width:17px; height:17px;" class="img" alt="">
+        <span style="width: 50%;">
+          کاغذ دیواری
+        </span>
+      </h5>
+    </div>
+
+
+    <model-viewer id="home" src="1.glb" camera-controls poster="decoration1.png" camera-orbit="45deg 80deg 4m"
+      environment-image="./music_hall_01_1k.hdr" touch-action="pan-y" shadow-intensity="0.93" shadow-softness="1"
+      in-camera-orbit="auto auto 30.35m" min-field-of-view="12deg">
+      <!-- <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+
+      </button>
+      <div id="ar-prompt">
+        <img src="ar_hand_prompt.png">
+      </div> -->
+    </model-viewer>
+
+
+
+    <div class="MaterialPC ">
+      <div class="ColorPc">
+        <div class="">رنگ</div>
+        <div class="" id="ColorPc"></div>
+      </div>
+      <div style="height: 100%; display: flex; justify-content: center;text-align: center;align-items: center;">
+        <hr class="line" />
+      </div>
+      <div class="TexturePc">
+        <div class="">جنس</div>
+        <div class="" id="TexturePc"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content">
+    <div class="responsiv">
+      <div class="option ">
+        <div class="grid" id="Material">
+          <div class="flexColor box " style='padding-top: 7px;padding-bottom: 7px;'>
+            <h1 class="Peroperties" onclick="ShowColor()">رنگ</h1>
+
+            <button id="prevButton">``</button>
+            <div class="slider">
+              <div class="colors">
+                <div class="flexColor" id="Color"></div>
+              </div>
+
+              <div class="colors">
+                <div class="flexColor" id="Color2"></div>
+              </div>
+
+            </div>
+
+
+            <button id="nextButton">></button>
+
+          </div>
+
+
+          <div class="flexColor box" style='padding-top: 7px;padding-bottom: 7px;'>
+            <h1 class="Peroperties" onclick="ShowColor()">جنس</h1>
+
+            <button id="prevButton2">``</button>
+            <div class="slider">
+              <div class="colors2">
+                <div class="flexColor" id="Texture"></div>
+              </div>
+
+              <div class="colors2">
+                <div class="flexColor" id="Texture2"></div>
+              </div>
+
+            </div>
+
+
+            <button id="nextButton2">></button>
+
+          </div>
+        </div>
+
+
+        <div class="myswiper">
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <h5 class="card__title box" onclick="changeMaterial('curtain','Material.002',window.event)">
+                      <img src="./assets/icon/window-curtains-thin.256x256.png" style="width:17px; height:17px;"
+                        class="img" alt="">پرده
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=3" alt=""> -->
+                    <h5 class="card__title box"
+                      onclick="changeMaterial('floor','Birch_Wood_Flooring__English',window.event)">
+                      <img src="./assets/icon/floor-plan.256x256.png" style="width:17px; height:17px;" class="img"
+                        alt="">کف
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=3" alt=""> -->
+                    <h5 class="card__title box" onclick="changeMaterial('wall','Material.001',window.event)">
+                      <img src="./assets/icon/floor-tiles.256x174.png" style="width:17px; height:17px;" class="img"
+                        alt="">کاغذ دیواری
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=4" alt=""> -->
+                    <h5 class="card__title box" onclick="changeMaterial('picture','Material.013',window.event)">
+                      <img src="./assets/icon/wallpaper.256x256 (1).png" style="width:17px; height:17px;" class="img"
+                        alt="">قاب عکس
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=4" alt=""> -->
+                    <h5 class="card__title box"
+                      onclick="changeMaterial('chandelier','Leather_Fabric_01.002',window.event)">
+                      <img src="./assets/icon/chandelier-light.256x256.png" style="width:17px; height:17px;" class="img"
+                        alt="">لوستر
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=4" alt=""> -->
+                    <h5 class="card__title box" onclick="changeMaterial('Carpet','Material.021',window.event)">
+                      <img src="./assets/icon/scarf-thin.256x247.png" style="width:17px; height:17px;" class="img"
+                        alt="">فرش
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=4" alt=""> -->
+                    <h5 class="card__title box" onclick="changeMaterial('accessory','Tecido.005',window.event)">
+                      <img src="./assets/icon/warm-scarf.245x256.png" style="width:17px; height:17px;" class="img"
+                        alt="">شال مبل
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=4" alt=""> -->
+                    <h5 class="card__title box" onclick="changeMaterial('sofa','Fabric.002',window.event)">
+                      <img src="./assets/icon/sofa-furniture.256x195.png" style="width:17px; height:17px;" class="img"
+                        alt=""> مبل
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=4" alt=""> -->
+                    <h5 class="card__title box" onclick="changeMaterial('backChar','Material.003',window.event)">
+                      <img src="./assets/icon/seat-chair.210x256.png" style="width:17px; height:17px;" class="img"
+                        alt="">چوب صندلی
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=4" alt=""> -->
+                    <h5 class="card__title box" onclick="changeMaterial('chair','Fabric.001',window.event)">
+                      <img src="./assets/icon/seat-chair.210x256.png" style="width:17px; height:17px;" class="img"
+                        alt=""> پارچه صندلی
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__image">
+                    <!-- <img src="https://picsum.photos/800/600?random=4" alt=""> -->
+                    <h5 class="card__title box" onclick="changeMaterial('table','Material.009',window.event)">
+                      <img src="./assets/icon/home-table.256x125.png" style="width:17px; height:17px;" class="img"
+                        alt="">میز
+                    </h5>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div>
+    <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+  </div>
+  <div class="swiper-pagination"></div>
+  </div>
+
+
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.innerWidth <= 425) {
+        const swiper = new Swiper('.swiper', {
+          loop: true,
+          slidesPerView: 3,
+          centeredSlides: true,
+          autoplay: {
+            enabled: true,
+            delay: 10000
+          },
+        });
+      }
+      else
+        if (window.innerWidth > 425) {
+          const swiper = new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 5,
+            centeredSlides: true,
+            autoplay: {
+              enabled: true,
+              delay: 10000
+            },
+          });
+        }
+
+    });
+  </script>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="script.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>
